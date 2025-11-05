@@ -1,0 +1,83 @@
+
+/* Básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f6fbfb; color: #033; padding-top: 64px; }
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 64px;
+  background: #00796b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 10;
+}
+
+.header .logo { font-weight: 700; }
+.menu .menu-btn {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu .menu-btn:hover {
+  background: #b2dfdb;
+  color: #004d40;
+}
+
+/* Layout principal */
+.main { max-width: 1500px; margin: 20px auto; padding: 10px; display: grid; gap: 18px; }
+.box { background: #e0f7fa; padding: 28px; border-radius: 10px; text-align: center; }
+
+/* Seção início */
+.box-inicio .foto {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00796b;
+  margin: 0 auto 12px;
+}
+
+.box-inicio .titulo { margin-bottom: 10px; }
+.box-inicio .texto { margin-bottom: 10px; }
+
+/* Formulário */
+.form { display: grid; gap: 10px; max-width: 620px; margin: 0 auto; }
+.input { padding: 10px; border-radius: 8px; border: 1px solid rgba(0,0,0,.12); font-size: 15px; }
+.btn {
+  background: #00796b; color: #fff; border: none; cursor: pointer;
+  font-weight: 700; padding: 10px; border-radius: 8px;
+  transition: opacity 0.2s;
+}
+.btn:hover { opacity: .95; }
+
+/* Footer */
+.footer {
+  background: #004d40;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.footer .redes-sociais .menu-btn {
+  color: #b2dfdb;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+/* Responsivo */
+@media(max-width: 600px) {
+  .box-inicio .foto { width: 120px; height: 120px; }
+  .header { padding: 0 10px; }
+  .menu .menu-btn { margin-left: 8px; }
+}
